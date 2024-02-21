@@ -45,6 +45,7 @@ svy: proportion longcvd_a, over(is)
 *Ever had flu vaccines in past 12mo
 svy: proportion shtflu12m_a, over(is)
 
-*Ever had pneumococcal vaccines
-svy: proportion shtpnuev_a, over(is)
+*Ever had pneumococcal vaccines; of note ACIP recommended anyone >=65 years to receive pneumococcal vaccines, as well as those <65 years with IS conditions
+svy: proportion shtpnuev_a if agep<65, over(is)
+svy: proportion shtpnuev_a if agep>=65 & agep<97, over(is)
 
